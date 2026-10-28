@@ -1,6 +1,6 @@
 ---
 layout: runbook
-title: '#4471 · three problems, not one'
+title: '#4471 · two problems, not one'
 owner: support desk
 status: known
 reviewed: 2026-10-28
@@ -14,28 +14,25 @@ signature: v1.eyJzdWIiOiI0NTgiLCJhdWQiOiJjaGFsbGVuZ2U6d2hhdC1pdC1zaG93cyIsImlhdC
   const signature = 'v1.eyJzdWIiOiI0NTgiLCJhdWQiOiJjaGFsbGVuZ2U6d2hhdC1pdC1zaG93cyIsImlhdCI6MTc5MzIyNzI3NywiZXhwIjoxNzkzMzEzNjc3fQ.WoGjr9AxlFtuzQN5AwNCUnJ6OehEIOEQ6Os3cvBBcDk';
 </script>
 
-#4471 merged **412 reports** as one date bug. They hold **three** problems. Only the first is
+#4471 merged **412 reports** as one date bug. They hold **two** problems. Only the first is
 the one the queued fix covers.
 
 <Callout>
-Not one issue. Three, and two of them have no fix queued.
+Not one issue. Two, and the second has no fix queued.
 </Callout>
 
 ## What the reports hold
 
 | # | problem | reports | ticket |
 |---|---|---|---|
-| 1 | The shared parser reads dates month first; day-first tenants get flipped dates | 374 | [issue 1](https://github.com/walshrf3/kb-4471-date-reports/issues/1) |
+| 1 | The shared parser reads dates month first; day-first tenants get flipped dates | 379 | [issue 1](https://github.com/walshrf3/kb-4471-date-reports/issues/1) |
 | 2 | The `booking-v3` form hints `MM/DD/YYYY` but reads day first | 33 | [issue 2](https://github.com/walshrf3/kb-4471-date-reports/issues/2) |
-| 3 | Dates land exactly one day off, no month swap (likely timezone) | 5 | [issue 3](https://github.com/walshrf3/kb-4471-date-reports/issues/3) |
 
-374 + 33 + 5 = 412.
+379 + 33 = 412. Of the 379, 5 reports were read by the desk as a one-day move; they stay under \`parser\`, where they are filed by tenant.
 
-## How the table below counts
+## The desk's own count
 
-The existing cause table sorts by tenant locale and booking form. It shows `parser` 379 and
-`hint` 33. The 5 extra under `parser` are the reports the desk read as a one-day move
-(`desk-notes.json`): they belong to problem 3, so `parser` is 374 without them.
+The cause table sorts by tenant locale and booking form, so a number here is the number the desk sees.
 
 <CauseTable ticket={4471} />
 
