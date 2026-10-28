@@ -28,7 +28,7 @@ Not one issue. Two, and the second has no fix queued.
 | 1 | The shared parser reads dates month first; day-first tenants get flipped dates | 379 | [issue 1](https://github.com/walshrf3/kb-4471-date-reports/issues/1) |
 | 2 | The `booking-v3` form hints `MM/DD/YYYY` but reads day first | 33 | [issue 2](https://github.com/walshrf3/kb-4471-date-reports/issues/2) |
 
-379 + 33 = 412. Of the 379, 5 reports were read by the desk as a one-day move; they stay under \`parser\`, where they are filed by tenant.
+379 + 33 = 412. Of the 379, 5 reports were read by the desk as a one-day move; they stay under `parser`, where they are filed by tenant.
 
 ## The desk's own count
 
